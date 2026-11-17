@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1f6feb">
+<title>河马剧场-河马短剧app-微短剧-免费网络短剧-河马剧场app-河马剧场官网</title>
+<meta name="description" content="河马剧场是一个专注于提供高质量短剧的平台。平台汇集了各种类型好看的短剧，包括微短剧、网络短剧、搞笑短剧等，可以通过河马剧场官网下载河马剧场app，观看河马短剧。加入河马剧场，让我们一起享受戏剧的魅力吧！">
+<meta name="keywords" content="河马剧场,河马短剧,河马剧场官网,河马短剧app,河马免费短剧">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="河马剧场-河马短剧app-微短剧-免费网络短剧">
+<meta property="og:description" content="河马剧场汇集微短剧、网络短剧、搞笑短剧等各类好看的短剧，支持分类筛选与关键词搜索，随时随地观看河马短剧。">
+<style>
+:root{--brand:#1f6feb;--brand-deep:#1349b8;--teal:#12b3a8;--ink:#12161f;--muted:#6b7484;--line:#e6e9ef;--bg:#f5f7fb;--card:#ffffff;--radius:14px;--shadow:0 6px 22px rgba(18,22,31,.07)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:15px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 16px}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.header-inner{display:flex;align-items:center;gap:18px;height:62px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;letter-spacing:.3px}
+.logo-mark{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;background:linear-gradient(135deg,var(--brand),var(--teal));box-shadow:0 4px 12px rgba(31,111,235,.35)}
+.logo-text{background:linear-gradient(90deg,var(--brand-deep),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav{display:flex;align-items:center;gap:6px;margin-left:auto}
+.nav a{padding:7px 12px;border-radius:9px;color:var(--muted);font-size:14.5px;font-weight:500;transition:.18s}
+.nav a:hover{color:var(--brand);background:#eef3fe}
+.nav a.active{color:var(--brand);background:#eaf1fe;font-weight:600}
+.nav-toggle{display:none;margin-left:auto;width:40px;height:38px;border:1px solid var(--line);background:#fff;border-radius:10px;font-size:18px;line-height:1;color:var(--ink);cursor:pointer}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#1349b8 0%,#1f6feb 52%,#12b3a8 100%);padding:46px 0 42px}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.10)}
+.hero::before{content:"";position:absolute;left:-70px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{margin:0 0 12px;font-size:30px;line-height:1.35;letter-spacing:.4px}
+.hero p{margin:0;max-width:760px;color:rgba(255,255,255,.9);font-size:14.5px}
+.search-bar{display:flex;gap:10px;max-width:600px;margin:22px 0 14px}
+.search-bar input{flex:1;min-width:0;padding:12px 15px;border:0;border-radius:11px;font-size:15px;color:var(--ink);background:#fff;outline:none;box-shadow:0 6px 18px rgba(4,20,60,.18)}
+.search-bar input:focus{box-shadow:0 0 0 3px rgba(255,255,255,.5),0 6px 18px rgba(4,20,60,.18)}
+.search-bar button{padding:0 22px;border:0;border-radius:11px;background:#0d1b3e;color:#fff;font-size:15px;font-weight:600;cursor:pointer;transition:.18s}
+.search-bar button:hover{background:#08122a}
+.hero-tags{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13.5px;color:rgba(255,255,255,.82)}
+.hero-tags button{border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);color:#fff;border-radius:20px;padding:3px 12px;font-size:13px;cursor:pointer;transition:.18s}
+.hero-tags button:hover{background:#fff;color:var(--brand-deep);border-color:#fff}
+.section{padding:34px 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.section-title{margin:0;font-size:21px;letter-spacing:.3px}
+.section-title small{display:block;margin-top:4px;font-size:13px;font-weight:400;color:var(--muted);letter-spacing:0}
+.filter-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{padding:7px 15px;border-radius:20px;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:13.5px;cursor:pointer;transition:.18s}
+.chip:hover{border-color:#b9cdf5;color:var(--brand)}
+.chip.on{background:linear-gradient(135deg,var(--brand),#3b86ff);border-color:transparent;color:#fff;font-weight:600;box-shadow:0 5px 14px rgba(31,111,235,.28)}
+.filter-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding-top:13px;border-top:1px dashed var(--line);flex-wrap:wrap}
+.stat{color:var(--muted);font-size:13.5px}
+.stat b{color:var(--brand);font-size:15px}
+.sort-box{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+.sort-box select{padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);font-size:13.5px;outline:none;cursor:pointer}
+.sort-box select:focus{border-color:#b9cdf5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(216px,1fr));gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(18,22,31,.12)}
+.cover{position:relative;aspect-ratio:3/4;display:flex;align-items:flex-end;padding:12px;color:#fff;overflow:hidden}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.55) 100%)}
+.cover-title{position:relative;z-index:2;font-size:16px;font-weight:700;line-height:1.4;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.cover-badge{position:absolute;z-index:2;left:10px;top:10px;padding:2px 8px;border-radius:20px;background:rgba(0,0,0,.42);font-size:12px;backdrop-filter:blur(4px)}
+.cover-score{position:absolute;z-index:2;right:10px;top:10px;padding:2px 8px;border-radius:20px;background:#ff8f1f;font-size:12px;font-weight:700}
+.card-body{padding:11px 12px 13px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-title{margin:0;font-size:15px;font-weight:650;line-height:1.45;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.card-desc{margin:0;font-size:12.8px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:41px}
+.card-meta{display:flex;gap:6px;flex-wrap:wrap}
+.pill{padding:2px 9px;border-radius:20px;font-size:12px;background:#eaf1fe;color:var(--brand)}
+.pill-ghost{background:#eef8f6;color:#0e8b82}
+.card-foot{display:flex;justify-content:space-between;gap:8px;font-size:12.2px;color:#9aa2b1;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line)}
+.empty{display:none;padding:46px 16px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);margin-top:20px}
+.empty strong{display:block;color:var(--ink);font-size:16px;margin-bottom:6px}
+.empty.show{display:block}
+.pager{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:26px}
+.pg{min-width:38px;height:38px;padding:0 13px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;font-size:14px;cursor:pointer;transition:.18s}
+.pg:hover:not(:disabled){border-color:var(--brand);color:var(--brand)}
+.pg:disabled{opacity:.45;cursor:not-allowed}
+.pg-on{background:linear-gradient(135deg,var(--brand),#3b86ff);border-color:transparent;color:#fff;font-weight:700;box-shadow:0 5px 14px rgba(31,111,235,.28)}
+.pg-on:hover:not(:disabled){color:#fff}
+.rank-wrap{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:6px 16px;box-shadow:var(--shadow)}
+.rank-list{list-style:none;margin:0;padding:0}
+.rank-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.rank-list li:last-child{border-bottom:0}
+.rank-no{width:24px;height:24px;flex:0 0 24px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:#f0f2f7;color:var(--muted);font-size:12.5px;font-weight:700}
+.rank-top{background:linear-gradient(135deg,#ff8f1f,#ff5a3c);color:#fff}
+.rank-title{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.rank-cat{color:var(--brand);background:#eaf1fe;border-radius:20px;padding:2px 9px;font-size:12px;flex:0 0 auto}
+.rank-hot{color:#9aa2b1;font-size:12.5px;flex:0 0 auto}
+.intro-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.intro-box h3{margin:0 0 10px;font-size:17px}
+.intro-box p{margin:0 0 12px;color:#39404f;font-size:14px;line-height:1.85}
+.intro-box p:last-child{margin-bottom:0}
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px}
+.faq summary{cursor:pointer;font-weight:600;font-size:14.5px;list-style:none;position:relative;padding-right:22px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:-1px;color:var(--brand);font-size:18px;font-weight:700}
+.faq details[open] summary::after{content:"-"}
+.faq details p{margin:9px 0 0;color:var(--muted);font-size:13.8px;line-height:1.8}
+.site-footer{background:#0f1729;color:#9aa6bd;padding:38px 0 22px;margin-top:20px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:26px}
+.site-footer h4{margin:0 0 12px;color:#fff;font-size:15px;font-weight:650}
+.site-footer p{margin:0;font-size:13.2px;line-height:1.85}
+.footer-links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:13.2px}
+.footer-links a:hover{color:#fff}
+.footer-bottom{margin-top:26px;padding-top:16px;border-top:1px solid rgba(255,255,255,.09);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.8px;color:#7c88a1}
+.to-top{position:fixed;right:18px;bottom:22px;z-index:70;width:44px;height:44px;border:0;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--teal));color:#fff;font-size:16px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:.22s;box-shadow:0 8px 20px rgba(31,111,235,.35)}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+@media (max-width:900px){
+.hero h1{font-size:25px}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+.nav{position:absolute;left:0;right:0;top:62px;flex-direction:column;align-items:stretch;gap:2px;background:#fff;border-bottom:1px solid var(--line);padding:8px 12px 14px;box-shadow:0 12px 24px rgba(18,22,31,.08);display:none}
+.nav.open{display:flex}
+.nav a{padding:11px 12px;font-size:15px}
+.nav-toggle{display:block}
+.hero{padding:34px 0 30px}
+.hero h1{font-size:22px}
+.hero p{font-size:13.6px}
+.search-bar{max-width:100%}
+.search-bar button{padding:0 16px;font-size:14px}
+.grid{grid-template-columns:repeat(2,1fr);gap:12px}
+.cover{padding:10px}
+.cover-title{font-size:14px}
+.card-title{font-size:13.8px}
+.card-desc{font-size:12px;min-height:38px}
+.section{padding:26px 0}
+.section-title{font-size:18px}
+.pg{min-width:34px;height:34px;padding:0 10px;font-size:13px}
+}
+@media (max-width:480px){
+.footer-grid{grid-template-columns:1fr}
+.card-foot{flex-direction:column;gap:2px}
+.rank-list li{gap:9px;font-size:13.2px}
+.rank-cat{display:none}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"河马剧场是什么？","acceptedAnswer":{"@type":"Answer","text":"河马剧场是一个专注于提供高质量短剧的平台，汇集了微短剧、网络短剧、搞笑短剧等多种类型的好看短剧，支持分类浏览与关键词搜索。"}},{"@type":"Question","name":"河马剧场app怎么下载？","acceptedAnswer":{"@type":"Answer","text":"可以通过河马剧场官网获取河马短剧app的下载入口，安装后即可在手机上观看河马免费短剧。"}},{"@type":"Question","name":"河马剧场的短剧需要付费吗？","acceptedAnswer":{"@type":"Answer","text":"河马剧场以免费网络短剧为主，平台内大量微短剧可以直接观看，部分内容会随更新节奏逐步开放。"}}]}</script>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">河</span>
+      <span class="logo-text">河马剧场</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="siteNav">☰</button>
+    <nav class="nav" id="siteNav">
+      <a href="#top" class="active">首页</a>
+      <a href="#list">全部短剧</a>
+      <a href="#rank">热播榜</a>
+      <a href="#about">平台介绍</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>河马剧场 - 免费微短剧与网络短剧在线观看</h1>
+    <p>河马剧场是一个专注于提供高质量短剧的平台。平台汇集了各种类型好看的短剧，包括微短剧、网络短剧、搞笑短剧等，可以通过河马剧场官网下载河马剧场app，观看河马短剧。加入河马剧场，让我们一起享受戏剧的魅力吧！</p>
+    <form class="search-bar" id="searchForm" role="search" action="#list">
+      <input id="searchInput" type="search" placeholder="搜索短剧名称、题材或关键词" aria-label="搜索短剧">
+      <button type="submit">搜索</button>
+    </form>
+    <div class="hero-tags">
+      <span>热门搜索：</span>
+      <button type="button" data-kw="逆袭">逆袭</button>
+      <button type="button" data-kw="甜宠">甜宠</button>
+      <button type="button" data-kw="穿越">穿越</button>
+      <button type="button" data-kw="悬疑">悬疑</button>
+      <button type="button" data-kw="搞笑">搞笑</button>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="section" id="list">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">全部短剧<small>按题材筛选，快速找到想看的河马短剧</small></h2>
+      </div>
+      <div class="filter-panel">
+        <div class="chips" id="chips">
+          <button class="chip on" type="button" data-cat="全部">全部</button>
+          <button class="chip" type="button" data-cat="都市情感">都市情感</button>
+          <button class="chip" type="button" data-cat="古装穿越">古装穿越</button>
+          <button class="chip" type="button" data-cat="悬疑推理">悬疑推理</button>
+          <button class="chip" type="button" data-cat="甜宠恋爱">甜宠恋爱</button>
+          <button class="chip" type="button" data-cat="搞笑喜剧">搞笑喜剧</button>
+          <button class="chip" type="button" data-cat="逆袭热血">逆袭热血</button>
+        </div>
+        <div class="filter-row">
+          <div class="stat" id="stat">共 36 部短剧</div>
+          <div class="sort-box">
+            <label for="sortSel">排序</label>
+            <select id="sortSel">
+              <option value="hot">最热播放</option>
+              <option value="new">最新上线</option>
+              <option value="score">评分优先</option>
+              <option value="ep">集数最多</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty"><strong>没有找到匹配的短剧</strong>换个关键词或切换分类试试</div>
+      <div class="pager" id="pager"></div>
+    </div>
+  </section>
+
+  <section class="section" id="rank">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">河马剧场热播榜<small>按播放热度实时排序的前十部微短剧</small></h2>
+      </div>
+      <div class="rank-wrap">
+        <ol class="rank-list" id="rankList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">关于河马剧场<small>微短剧、网络短剧与搞笑短剧的集中观看入口</small></h2>
+      </div>
+      <div class="intro-box">
+        <h3>河马剧场：把好看的短剧装进一部手机</h3>
+        <p>河马剧场是一个专注于提供高质量短剧的平台，主打节奏紧凑、单集时长短的微短剧形态。平台内容覆盖都市情感、古装穿越、悬疑推理、甜宠恋爱、搞笑喜剧、逆袭热血等多个方向，每部作品都以高密度的情节推进，让用户在通勤、午休、睡前等碎片时间里也能完整追完一个故事。</p>
+        <p>在河马剧场，找剧的方式不止一种。你可以通过顶部的关键词搜索，直接输入剧名、题材或人物关键词；也可以在全部短剧区按分类筛选，再用排序切换最热播放、最新上线、评分优先或集数最多；页面下方的热播榜则按播放热度排序，适合不知道看什么的时候直接参考。所有列表均支持分页浏览，手机上同样可以顺畅操作。</p>
+        <p>想看更完整的观剧体验，可以通过河马剧场官网下载河马剧场app。安装后即可在手机上观看河马短剧，支持连续追剧与更新提醒，网络短剧更新后会第一时间出现在列表里。河马免费短剧专区持续补充新内容，搞笑短剧与治愈系作品也在同步扩充，满足不同口味的选择。</p>
+        <p>无论你是第一次接触微短剧，还是已经在追某部连载作品，河马剧场都希望用清晰的内容分类、稳定的播放体验和持续的内容更新，让你在几分钟内找到一部愿意看完的剧。加入河马剧场，让我们一起享受戏剧的魅力吧！</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">常见问题<small>关于河马剧场、河马短剧app与免费短剧的说明</small></h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>河马剧场是什么？</summary>
+          <p>河马剧场是一个专注于提供高质量短剧的平台，汇集了微短剧、网络短剧、搞笑短剧等多种类型的好看短剧，支持分类筛选、关键词搜索与分页浏览，方便快速找到想看的作品。</p>
+        </details>
+        <details>
+          <summary>河马剧场app怎么下载？</summary>
+          <p>可以通过河马剧场官网获取河马短剧app的下载入口，按页面提示完成安装后，即可在手机上随时观看河马短剧，并接收更新提醒。</p>
+        </details>
+        <details>
+          <summary>河马剧场的短剧需要付费吗？</summary>
+          <p>河马剧场以免费网络短剧为主，平台内大量微短剧可以直接观看，部分内容会随更新节奏逐步开放，具体以页面展示为准。</p>
+        </details>
+        <details>
+          <summary>河马短剧一般多久更新一次？</summary>
+          <p>不同作品的更新节奏不同，连载中的短剧通常按固定周期更新，更新后的剧集会以最新上线排序优先展示，便于用户第一时间追更。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>河马剧场</h4>
+        <p>河马剧场是一个专注于提供高质量短剧的平台，涵盖微短剧、网络短剧、搞笑短剧等类型，通过河马剧场官网可获取河马短剧app，随时观看河马免费短剧。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul class="footer-links">
+          <li><a href="#list">全部短剧</a></li>
+          <li><a href="#rank">热播榜单</a></li>
+          <li><a href="#about">平台介绍</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>热门题材</h4>
+        <ul class="footer-links">
+          <li><a href="#list">都市情感短剧</a></li>
+          <li><a href="#list">古装穿越短剧</a></li>
+          <li><a href="#list">悬疑推理短剧</a></li>
+          <li><a href="#list">甜宠恋爱短剧</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用提示</h4>
+        <p>页面内容为平台短剧信息展示与检索，播放与下载请以河马剧场官方渠道为准。如遇内容显示异常，可尝试刷新页面或更换浏览器。</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 河马剧场 短剧信息展示页</span>
+      <span>关键词：河马剧场 · 河马短剧 · 微短剧 · 免费网络短剧</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="返回顶部">↑</button>
+
+<script>
+(function(){
+  var data = [
+    {id:1,title:"逆袭人生从离婚开始",cat:"都市情感",tag:"逆袭",ep:80,score:9.2,views:2680.5,year:2026,desc:"被扫地出门的赘婿三年后强势回归，一场离婚协议掀开豪门往事。"},
+    {id:2,title:"总裁的隐婚小娇妻",cat:"甜宠恋爱",tag:"隐婚",ep:96,score:9.0,views:3120.8,year:2026,desc:"一纸婚约藏了三年，直到她在发布会上被记者追问无名指上的戒指。"},
+    {id:3,title:"穿越之王妃要休夫",cat:"古装穿越",tag:"穿越",ep:72,score:8.8,views:1940.2,year:2025,desc:"现代律师魂穿将军府弃妃，第一件事就是当众撕了那封和离书。"},
+    {id:4,title:"深夜来电",cat:"悬疑推理",tag:"悬疑",ep:60,score:9.1,views:1520.6,year:2026,desc:"凌晨三点，同一个号码连续七天打来，电话那头是她自己的声音。"},
+    {id:5,title:"我的老板是憨憨",cat:"搞笑喜剧",tag:"职场",ep:48,score:8.6,views:2260.0,year:2025,desc:"新来的老板嘴甜心软，全公司都在教他怎么当一个合格的上司。"},
+    {id:6,title:"战神归来",cat:"逆袭热血",tag:"热血",ep:100,score:9.3,views:4210.4,year:2026,desc:"边关十年，他一纸战报回京，只为给当年枉死的兄弟讨个说法。"},
+    {id:7,title:"重生之豪门千金",cat:"都市情感",tag:"重生",ep:88,score:8.9,views:2870.1,year:2025,desc:"回到被夺走人生的那一天，她决定先把属于自己的名字拿回来。"},
+    {id:8,title:"闪婚老公是首富",cat:"甜宠恋爱",tag:"闪婚",ep:84,score:8.7,views:3450.9,year:2026,desc:"民政局门口随手拉的路人，转身成了全城都在找的神秘富豪。"},
+    {id:9,title:"宫墙柳",cat:"古装穿越",tag:"宫斗",ep:76,score:9.0,views:1680.3,year:2025,desc:"冷宫三年，她靠一手绣工重新走进那座吃人的宫墙。"},
+    {id:10,title:"第七个证人",cat:"悬疑推理",tag:"推理",ep:54,score:9.2,views:1290.7,year:2026,desc:"六份证词彼此吻合，只有第七个证人说了完全相反的话。"},
+    {id:11,title:"相亲现场翻车记",cat:"搞笑喜剧",tag:"都市",ep:40,score:8.4,views:1780.2,year:2025,desc:"一百场相亲，一百次翻车，第一百零一场她终于遇到了对的人。"},
+    {id:12,title:"赘婿的逆袭",cat:"逆袭热血",tag:"逆袭",ep:92,score:9.1,views:3860.5,year:2026,desc:"所有人都等着看他笑话，直到那份股权转让书被摊在桌上。"},
+    {id:13,title:"她的第二人生",cat:"都市情感",tag:"成长",ep:66,score:8.8,views:1420.8,year:2025,desc:"三十岁那年她辞了职，从一间不足十平米的烘焙房重新开始。"},
+    {id:14,title:"竹马宠我上天",cat:"甜宠恋爱",tag:"青梅竹马",ep:78,score:8.9,views:2610.4,year:2026,desc:"从小一起长大的两个人，直到婚礼前一天才承认彼此的心意。"},
+    {id:15,title:"医妃惊华",cat:"古装穿越",tag:"医术",ep:90,score:9.1,views:2140.6,year:2025,desc:"一手银针治好了太子的旧疾，也治好了这座王府藏了十年的暗伤。"},
+    {id:16,title:"消失的第七天",cat:"悬疑推理",tag:"悬疑",ep:58,score:8.9,views:1180.2,year:2026,desc:"她在第七天醒来，身边所有人都说这七天从未发生过。"},
+    {id:17,title:"全村致富靠我",cat:"逆袭热血",tag:"励志",ep:64,score:8.7,views:1560.9,year:2025,desc:"大学生回乡第一年，把荒坡变成了全镇最赚钱的果园。"},
+    {id:18,title:"前任请自重",cat:"都市情感",tag:"虐恋",ep:70,score:8.5,views:1930.3,year:2026,desc:"分手五年后再遇，他成了她的甲方，而合同只有一条：别提从前。"},
+    {id:19,title:"太子妃的逃婚计划",cat:"古装穿越",tag:"甜宠",ep:82,score:8.8,views:2070.5,year:2025,desc:"大婚当日翻墙出逃，没想到墙外等着的人正是当朝太子。"},
+    {id:20,title:"笨女孩的逆袭日记",cat:"搞笑喜剧",tag:"校园",ep:44,score:8.3,views:1350.7,year:2026,desc:"从年级倒数到保送生，她只用了三百六十五本错题本。"},
+    {id:21,title:"真假千金",cat:"都市情感",tag:"豪门",ep:86,score:9.0,views:2740.8,year:2025,desc:"一场亲子鉴定，让两个女孩的人生在十八岁那年交换了位置。"},
+    {id:22,title:"我在古代开饭馆",cat:"古装穿越",tag:"美食",ep:68,score:8.6,views:1620.4,year:2026,desc:"带着一本菜谱穿回古代，她在长安街头支起了第一口铁锅。"},
+    {id:23,title:"无声的证词",cat:"悬疑推理",tag:"法医",ep:62,score:9.1,views:1480.6,year:2025,desc:"不会说话的女孩用手语画出了凶手走路的样子。"},
+    {id:24,title:"守护你的每个夜晚",cat:"甜宠恋爱",tag:"治愈",ep:74,score:8.9,views:2190.2,year:2026,desc:"急诊科医生和值班警察，在同一家便利店遇见了彼此的第37个夜班。"},
+    {id:25,title:"我的姐姐是顶流",cat:"都市情感",tag:"娱乐",ep:56,score:8.5,views:1810.9,year:2025,desc:"姐姐在最红的时候退圈，只为替妹妹挡下一场诬陷。"},
+    {id:26,title:"拳王归来",cat:"逆袭热血",tag:"热血",ep:80,score:8.8,views:2010.3,year:2026,desc:"退役三年，他重新戴上那副被收进箱底的拳套。"},
+    {id:27,title:"夫人她马甲又掉了",cat:"甜宠恋爱",tag:"马甲",ep:98,score:9.2,views:3980.7,year:2026,desc:"顶级设计师、赛车手、围棋冠军，所有身份都指向同一个人。"},
+    {id:28,title:"宫宴惊变",cat:"古装穿越",tag:"权谋",ep:74,score:8.9,views:1750.5,year:2025,desc:"一场宫宴，三杯御酒，五个家族从此改写了命运。"},
+    {id:29,title:"大龄剩女的春天",cat:"都市情感",tag:"婚恋",ep:52,score:8.4,views:1290.8,year:2026,desc:"三十五岁生日那天，她决定不再为别人的期待而活。"},
+    {id:30,title:"憨憨室友爆笑日常",cat:"搞笑喜剧",tag:"校园",ep:36,score:8.2,views:1140.6,year:2025,desc:"四个奇葩室友，一间不足二十平米的宿舍，一年三百个笑点。"},
+    {id:31,title:"破局者",cat:"悬疑推理",tag:"商战",ep:60,score:9.0,views:1660.1,year:2026,desc:"一份提前泄露的财报，让整座写字楼的人都成了嫌疑人。"},
+    {id:32,title:"我在平行世界当首富",cat:"逆袭热血",tag:"脑洞",ep:70,score:8.6,views:1880.4,year:2025,desc:"一觉醒来账户余额后面多了八个零，代价是这个世界没有他的家人。"},
+    {id:33,title:"退婚后我成了团宠",cat:"甜宠恋爱",tag:"团宠",ep:88,score:9.1,views:3050.2,year:2026,desc:"退婚书上签下名字的那一刻，四大家族同时递来了橄榄枝。"},
+    {id:34,title:"小巷烟火",cat:"都市情感",tag:"生活",ep:46,score:9.0,views:1580.9,year:2025,desc:"一条老巷子，七户人家，一年四季的家长里短。"},
+    {id:35,title:"剑客不还乡",cat:"古装穿越",tag:"武侠",ep:78,score:8.7,views:1960.3,year:2025,desc:"十年江湖，一把断剑，他始终没有回头看一眼故乡的方向。"},
+    {id:36,title:"我妈是隐藏大佬",cat:"搞笑喜剧",tag:"家庭",ep:50,score:8.8,views:2120.5,year:2026,desc:"儿子闯祸被叫家长，教导主任看到来人后当场站直了身子。"}
+  ];
+  var PAGE_SIZE = 9;
+  var state = {cat:"全部",sort:"hot",page:1,kw:""};
+  var grid = document.getElementById("grid");
+  var stat = document.getElementById("stat");
+  var pager = document.getElementById("pager");
+  var empty = document.getElementById("empty");
+  var chips = document.getElementById("chips");
+  var sortSel = document.getElementById("sortSel");
+  var searchForm = document.getElementById("searchForm");
+  var searchInput = document.getElementById("searchInput");
+  var rankList = document.getElementById("rankList");
+
+  function fmtViews(v){
+    if(v >= 10000){return (v/10000).toFixed(2) + "亿";}
+    return v.toFixed(1) + "万";
+  }
+
+  function filtered(){
+    var kw = state.kw.trim().toLowerCase();
+    var arr = data.filter(function(it){
+      var okCat = state.cat === "全部" || it.cat === state.cat;
+      var hay = (it.title + it.cat + it.tag + it.desc).toLowerCase();
+      var okKw = kw === "" || hay.indexOf(kw) > -1;
+      return okCat && okKw;
+    });
+    if(state.sort === "hot"){
+      arr.sort(function(a,b){return b.views - a.views;});
+    }else if(state.sort === "new"){
+      arr.sort(function(a,b){return b.year - a.year || b.views - a.views;});
+    }else if(state.sort === "score"){
+      arr.sort(function(a,b){return b.score - a.score || b.views - a.views;});
+    }else{
+      arr.sort(function(a,b){return b.ep - a.ep || b.views - a.views;});
+    }
+    return arr;
+  }
+
+  function cardHtml(it){
+    var hue = (it.id * 47) % 360;
+    var hue2 = (hue + 42) % 360;
+    var bg = "background:linear-gradient(135deg,hsl(" + hue + ",72%,56%),hsl(" + hue2 + ",68%,38%))";
+    return "<article class=\"card\">" +
+      "<div class=\"cover\" style=\"" + bg + "\">" +
+        "<span class=\"cover-badge\">更新至" + it.ep + "集</span>" +
+        "<span class=\"cover-score\">" + it.score.toFixed(1) + "</span>" +
+        "<span class=\"cover-title\">" + it.title + "</span>" +
+      "</div>" +
+      "<div class=\"card-body\">" +
+        "<h3 class=\"card-title\">" + it.title + "</h3>" +
+        "<p class=\"card-desc\">" + it.desc + "</p>" +
+        "<div class=\"card-meta\"><span class=\"pill\">" + it.cat + "</span><span class=\"pill pill-ghost\">" + it.tag + "</span></div>" +
+        "<div class=\"card-foot\"><span>" + it.year + " 年出品</span><span>" + fmtViews(it.views) + "播放</span></div>" +
+      "</div>" +
+    "</article>";
+  }
+
+  function renderPager(pages){
+    var html = "<button class=\"pg\" type=\"button\" data-page=\"" + (state.page - 1) + "\"" + (state.page === 1 ? " disabled" : "") + ">上一页</button>";
+    var i;
+    for(i = 1; i <= pages; i++){
+      html += "<button class=\"pg" + (i === state.page ? " pg-on" : "") + "\" type=\"button\" data-page=\"" + i + "\">" + i + "</button>";
+    }
+    html += "<button class=\"pg\" type=\"button\" data-page=\"" + (state.page + 1) + "\"" + (state.page === pages ? " disabled" : "") + ">下一页</button>";
+    pager.innerHTML = html;
+  }
+
+  function render(){
+    var arr = filtered();
+    var total = arr.length;
+    var pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    if(state.page > pages){state.page = pages;}
+    if(state.page < 1){state.page = 1;}
+    var start = (state.page - 1) * PAGE_SIZE;
+    var list = arr.slice(start, start + PAGE_SIZE);
+    grid.innerHTML = list.map(cardHtml).join("");
+    stat.innerHTML = "共 <b>" + total + "</b> 部短剧 · 第 " + state.page + "/" + pages + " 页";
+    empty.className = total === 0 ? "empty show" : "empty";
+    renderPager(pages);
+  }
+
+  function renderRank(){
+    var arr = data.slice().sort(function(a,b){return b.views - a.views;}).slice(0,10);
+    rankList.innerHTML = arr.map(function(it,i){
+      return "<li><span class=\"rank-no" + (i < 3 ? " rank-top" : "") + "\">" + (i + 1) + "</span>" +
+        "<span class=\"rank-title\">" + it.title + "</span>" +
+        "<span class=\"rank-cat\">" + it.cat + "</span>" +
+        "<span class=\"rank-hot\">" + fmtViews(it.views) + "播放</span></li>";
+    }).join("");
+  }
+
+  chips.addEventListener("click", function(e){
+    var btn = e.target.closest(".chip");
+    if(!btn){return;}
+    var all = chips.querySelectorAll(".chip");
+    var i;
+    for(i = 0; i < all.length; i++){all[i].className = "chip";}
+    btn.className = "chip on";
+    state.cat = btn.getAttribute("data-cat");
+    state.page = 1;
+    render();
+  });
+
+  sortSel.addEventListener("change", function(){
+    state.sort = sortSel.value;
+    state.page = 1;
+    render();
+  });
+
+  searchForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    state.kw = searchInput.value;
+    state.page = 1;
+    render();
+    document.getElementById("list").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+
+  searchInput.addEventListener("input", function(){
+    state.kw = searchInput.value;
+    state.page = 1;
+    render();
+  });
+
+  pager.addEventListener("click", function(e){
+    var btn = e.target.closest(".pg");
+    if(!btn || btn.disabled){return;}
+    var p = parseInt(btn.getAttribute("data-page"), 10);
+    if(isNaN(p)){return;}
+    state.page = p;
+    render();
+    document.getElementById("list").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+
+  var heroTags = document.querySelectorAll(".hero-tags button");
+  heroTags.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var kw = btn.getAttribute("data-kw");
+      searchInput.value = kw;
+      state.kw = kw;
+      state.page = 1;
+      render();
+      document.getElementById("list").scrollIntoView({behavior:"smooth",block:"start"});
+    });
+  });
+
+  var navToggle = document.getElementById("navToggle");
+  var siteNav = document.getElementById("siteNav");
+  navToggle.addEventListener("click", function(){
+    var open = siteNav.className.indexOf("open") > -1;
+    siteNav.className = open ? "nav" : "nav open";
+    navToggle.setAttribute("aria-expanded", open ? "false" : "true");
+  });
+
+  siteNav.addEventListener("click", function(e){
+    if(e.target.tagName === "A"){
+      siteNav.className = "nav";
+      navToggle.setAttribute("aria-expanded", "false");
+      var links = siteNav.querySelectorAll("a");
+      var i;
+      for(i = 0; i < links.length; i++){links[i].className = "";}
+      e.target.className = "active";
+    }
+  });
+
+  var toTop = document.getElementById("toTop");
+  window.addEventListener("scroll", function(){
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    toTop.className = y > 420 ? "to-top show" : "to-top";
+  });
+
+  toTop.addEventListener("click", function(){
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+
+  render();
+  renderRank();
+})();
+</script>
+</body>
+</html>
